@@ -56,9 +56,10 @@ td:first-child {
     padding: 8px 0;
 }
 
-.social p{
+.social p a{
     color: white;
     font-size: 15px;
     padding-right: 25px;
+    text-decoration: none;
     
 }
