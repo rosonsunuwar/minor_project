@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, 
+#4776e6, 
+#8e54e9);
+}
+
+.header{
+    position: relative;
+    display: flex;
+    /* background-color: #8e54e9; */
+}
+
+.logo{
+     position: relative;
+     width: 6cm;
+     margin-left: 7%;
+     margin-top: 1%;
+     height: 2cm;
+}
+
+img{
+    width: 100%;
+}
+
+.navbar{
+    max-width: fit-content;
+    height: fit-content;
+    position: relative;
+    list-style-type: none;
+    margin-left: 14%;
+    margin-top: 2%;
+    overflow: hidden;
+    background-image: linear-gradient(to left, 
+#4776e6, 
+#8e54e9);
+    /* border: 0.5px solid black; */
+    border-radius: 25px;
+    
+}
+
+a{
+    float: left;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 10px;
+    letter-spacing: 0.5px;
+}
+
+a:hover{
+    background-color: #111;
+}
+
+.login_section{
+    position: relative;
+    height: fit-content;
+    max-width: fit-content;
+    color: white;
+    border-radius: 25px;
+    letter-spacing: 0.5px;
+    margin-top: 2%;
+    margin-left: 15%;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sign_up{
+    background-color: #eb790f;
+}
+
+.login:hover{
+    background-color: #0b84e7;
+}
+
+.sign_up:hover{
+    background-color: #0b84e7;
+}
+
+.container{
+    position: relative;
+    margin: 15px;
+}
+
+.pictures{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cross{
+    transform: scalex(-1);
+    transform: scalex(-1);
+    -webkit-filter: drop-shadow(5px 5px 5px #0a0a0a);
+    filter: drop-shadow(10px 10px 20px black);
+}
+
+.r1{
+    filter: drop-shadow(5px 5px 5px #0a0a0a);
+    filter: drop-shadow(10px 10px 20px black);
+}
+
+.intro{
+    /* border: 1px solid black; */
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 0px;
+}
