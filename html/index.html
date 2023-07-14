@@ -22,30 +22,56 @@
             
             <!-- navbar section starts -->
                <div class="nav_lists">
-                  <a href="#" class="active">HOME</a>
-                  <a href="#">ABOUT</a>
-                  <a href="#">BIKES</a>
-                  <a href="#">SCOOTERS</a>
-                  <a href="#">GALLERY</a>
-                  <a href="#">CONTACTS</a>
+                  <a class="nav" href="#">HOME</a>
+                  <a class="nav" href="#">ABOUT</a>
+
+                  <!-- drppdown lists of bike -->
+                  <div class="dropdown">
+                    <a class="nav" href="#">BIKES</a>
+                    <div class="dropdown-content">
+                      <a href="#">R15M</a>
+                      <a href="#">R15V3</a>
+                      <a href="#">R15V4</a>
+                      <a href="#">MT15</a>
+                      <a href="#">MTO9</a>
+                      <a href="#">FZSV2</a>
+                      <a href="#">FZSV3</a>
+                    </div>
+                  </div>
+                  
+                  <!-- dropdown lists of scooter -->
+                  <div class="dropdown">
+                    <a class="nav" href="#">SCOOTERS</a>
+                    <div class="dropdown-content">
+                      <a href="#">AROX 155</a>
+                      <a href="#">RAY Z 113</a>
+                      <a href="#">FASCINO</a>
+                      <a href="#">RAY ZR 125 FI SERIES</a>
+                    </div>
+                  </div>
+                  
+                  <a class="nav" href="#">GALLERY</a>
+                  <a class="nav" href="#">CONTACTS</a>
                 </div>
            <!-- navbar section ends -->
 
            <!-- login section starts -->
            <div class="login">
               <div>
-                  <a href="#">Login</a>
-                  <a href="#">Sign Up</a>
+                  <a class="nav" href="#">Login</a>
+                  <a class="nav" href="#">Sign Up</a>
               </div>
            </div>
+           <!-- login section ends -->
 
             <!-- menu bar -->
               <div class="menubar">
                 <i class="fa fa-bars"></i>
               </div>
             </div>
+
         <!-- searchbar starts -->
-        <div class="search-container">
+        <div class="search-container" id="mySearchbar">
             <input type="text" placeholder="Search.." class="searchterm" name="search">
               
               <button type="submit" class="searchbutton">
@@ -53,6 +79,45 @@
               </button>
           </div>
           <!-- searchbar ends -->
+    </div>
+    <!-- header section ends -->
+
+    <!-- products icons linkd -->
+    <div class="linked-icons">
+      <div class="bikes-linked-icon">
+        <img style="width: 100%;" src="../images/home/r15.png" alt="bikes-icon">
+      </div>
+
+      <div class="scooters-linked-icon">
+        <img style="width: 100%;" src="../images/home/Fascino.png" alt="">
+      </div>
+
+      <div class="gallery-linked-icon">
+        <img style="width: 100%;" src="../images/home/gallery.png" alt="gallery">
+      </div>
+    </div>
+
+    <!-- featured products section starts -->
+    <div class="featured-section">
+      <h1 class="featured-section-tittle">FEATURED PRODUCTS</h1>
+
+      <div class="featured-product-list">
+        <div class="aexor-155">
+          <img style="width: 100%;" src="../images/home/aexor 155.png" alt="Aexor 155"><span class="products-name">Aexor 155</span>
+        </div>
+
+        <div class="fz-x">
+          <img style="width: 100%;" src="../images/home/fz-x.png" alt="fz-x"><span class="products-name">FZ-X</span>
+        </div>
+
+        <div class="fzv3">
+          <img style="width: 100%;" src="../images/home/fzv3.png" alt="fzv3"><span class="products-name">FZ V3</span>
+        </div>
+
+        <div class="r15m">
+          <img style="width: 100%;" src="../images/home/r15m.png" alt="r15m"><span class="products-name">R15 V4</span>
+        </div>
+      </div>
     </div>
 </body>
 <link rel="stylesheet" href="../javascript/script.js">
@@ -62,12 +127,16 @@
   
   var header = document.getElementById("myHeader");
   var sticky = header.offsetTop;
+  var hold = header.offsetTop;
+  var search = document.getElementById("mySearchbar");
   
   function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
+      search.classList.add("hold")
     } else {
       header.classList.remove("sticky");
+      search.classList.remove("hold")
     }
   }
   </script>
