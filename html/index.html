@@ -7,70 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaha</title>
     <link rel="stylesheet" href="../css/home.css">
+    <script src="https://kit.fontawesome.com/cf6daf62a4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- header section starts -->
     <div class="header">
-        <div class="logo">
-            <div class="image"><img src="../images/home/logo.png" alt="Yamaha"></div>
-        </div>
+           <img src="../images/home/wallpaper.jpg" style="position: relative; width: 100%;">
 
-        <!-- navigation bar -->
-        <nav class="navbar">
-            <a class="active" href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="#moterbike">MOTORBIKES</a>
-            <a href="#scooter">SCOOTER</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
+           
+        <div class="navbar" id="myHeader">
+            <!-- yamaha logo -->
+            <div class="logo"><img src="../images/home/logo.png" alt=""></div>
+            
+            <!-- navbar section starts -->
+               <div class="nav_lists">
+                  <a href="#" class="active">HOME</a>
+                  <a href="#">ABOUT</a>
+                  <a href="#">BIKES</a>
+                  <a href="#">SCOOTERS</a>
+                  <a href="#">GALLERY</a>
+                  <a href="#">CONTACTS</a>
+                </div>
+           <!-- navbar section ends -->
 
-        <!-- login or sign up section -->
-        <span class="login_section">
-            <ul>
-                <a href="#login" class="login">Login</a>
-                <a href="#sign_up" class="sign_up">Sign Up</a>
-            </ul>
-        </span>
+           <!-- login section starts -->
+           <div class="login">
+              <div>
+                  <a href="#">Login</a>
+                  <a href="#">Sign Up</a>
+              </div>
+           </div>
 
-
-        <!-- dropdown -->
-        <div class="dropdown">
-            <!-- using checkbox -->
-            <label for="menu" class="menu_icon">&#9776;</label>
-            <input type="checkbox" onclick="myFunction()" id="menu" class="checkbox">
-        </div>
-    </div>
-    <div class="menu_list"></div>
-    <div id="myDropdown" class="dropdown_content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#moterbike">Moterbikes</a>
-        <a href="#scooter">Scooter</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-
-
-    <div class="intro">
-        <h1>
-            Search it <br>
-            and <span style="color: orangered;">book</span> enjoyable.
-        </h1>
-        <p>
-            Find, explore and book in an awesome <br>place find, explore
-            and transfer in an awesome and great place.
-        </p>
-    </div>
-
-    <div class="container">
-        <div class="pictures">
-            <div class="r1"><img src="../images/home/r1.png" alt="R1">
+            <!-- menu bar -->
+              <div class="menubar">
+                <i class="fa fa-bars"></i>
+              </div>
             </div>
-            <div class="cross"><img src="../images/home/cross.png" alt="cross">
-            </div>
-        </div>
+        <!-- searchbar starts -->
+        <div class="search-container">
+            <input type="text" placeholder="Search.." class="searchterm" name="search">
+              
+              <button type="submit" class="searchbutton">
+                <i class="fa fa-search"></i>
+              </button>
+          </div>
+          <!-- searchbar ends -->
     </div>
 </body>
 <link rel="stylesheet" href="../javascript/script.js">
+
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
 </html>
