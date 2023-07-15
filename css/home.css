@@ -142,6 +142,7 @@ a{
     display: none;
     background: transparent;
     align-items: center;
+    cursor: pointer;
 }
 
 .linked-icons{
@@ -236,7 +237,24 @@ a{
     font-weight: bold;
 }
 
+.toogle{
+    color: black;
+    font-size: 30px;
+}
 
+.toogle-menu{
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 25%;
+    left: 85%;
+}
+
+.toogle{
+    display: block;
+    padding: 10px 5px;
+    color: white;
+}
 
 @media screen and (max-width: 1000px) {
     .nav_lists{

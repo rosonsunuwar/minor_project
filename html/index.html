@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaha</title>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../javascript/script.js">
     <script src="https://kit.fontawesome.com/cf6daf62a4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -65,10 +66,18 @@
            <!-- login section ends -->
 
             <!-- menu bar -->
-              <div class="menubar">
+              <div class="menubar" onclick="myMenulists()">
                 <i class="fa fa-bars"></i>
               </div>
             </div>
+            <!-- menubar ends -->
+
+             <!-- toogle menubar starts -->
+             <div class="toogle-menu" id="toogle-menu-lists">
+                <a class="toogle" href="#">HOME</a>
+                <a class="toogle" href="#">ABOUT</a>
+        </div>
+        <!-- toogle menu ends -->
 
         <!-- searchbar starts -->
         <div class="search-container" id="mySearchbar">
@@ -120,24 +129,31 @@
       </div>
     </div>
 </body>
-<link rel="stylesheet" href="../javascript/script.js">
-
 <script>
-  window.onscroll = function() {myFunction()};
+  //   window.onscroll = function() {myFunction()};
   
-  var header = document.getElementById("myHeader");
-  var sticky = header.offsetTop;
-  var hold = header.offsetTop;
-  var search = document.getElementById("mySearchbar");
+  // var header = document.getElementById("myHeader");
+  // var sticky = header.offsetTop;
+  // var hold = header.offsetTop;
+  // var search = document.getElementById("mySearchbar");
   
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-      search.classList.add("hold")
-    } else {
-      header.classList.remove("sticky");
-      search.classList.remove("hold")
+  // function myFunction() {
+  //   if (window.pageYOffset > sticky) {
+  //     header.classList.add("sticky");
+  //     search.classList.add("hold")
+  //   } else {
+  //     header.classList.remove("sticky");
+  //     search.classList.remove("hold")
+  //   }
+  // }
+
+    function myMenulists() {
+      var menuItem = document.getElementById("toogle-menu-lists");
+      if (menuItem.style.display === "none") {
+          menuItem.style.display = "block";
+      } else {
+        menuItem.style.display = "none";
+      }
     }
-  }
-  </script>
+</script>
 </html>
