@@ -66,7 +66,7 @@
            <!-- login section ends -->
 
             <!-- menu bar -->
-              <div class="menubar" onclick="myMenulists()">
+              <div class="menubar" onclick="toggleMenulists()">
                 <i class="fa fa-bars"></i>
               </div>
             </div>
@@ -130,24 +130,24 @@
     </div>
 </body>
 <script>
-  //   window.onscroll = function() {myFunction()};
+    window.onscroll = myFunction;
   
-  // var header = document.getElementById("myHeader");
-  // var sticky = header.offsetTop;
-  // var hold = header.offsetTop;
-  // var search = document.getElementById("mySearchbar");
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  var hold = header.offsetTop;
+  var search = document.getElementById("mySearchbar");
   
-  // function myFunction() {
-  //   if (window.pageYOffset > sticky) {
-  //     header.classList.add("sticky");
-  //     search.classList.add("hold")
-  //   } else {
-  //     header.classList.remove("sticky");
-  //     search.classList.remove("hold")
-  //   }
-  // }
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+      search.classList.add("hold")
+    } else {
+      header.classList.remove("sticky");
+      search.classList.remove("hold")
+    }
+  }
 
-    function myMenulists() {
+    function toggleMenulists() {
       var menuItem = document.getElementById("toogle-menu-lists");
       if (menuItem.style.display === "none") {
           menuItem.style.display = "block";
