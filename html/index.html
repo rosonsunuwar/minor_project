@@ -66,7 +66,7 @@
            <!-- login section ends -->
 
             <!-- menu bar -->
-              <div class="menubar" onclick="toggleMenulists()">
+              <div class="menubar" onclick="openNav()">
                 <i class="fa fa-bars"></i>
               </div>
             </div>
@@ -76,11 +76,17 @@
              <div class="toogle-menu" id="toogle-menu-lists">
                 <a class="toogle" href="#">HOME</a>
                 <a class="toogle" href="#">ABOUT</a>
+                <a class="toogle" href="#">BIKES</a>
+                <a class="toogle" href="#">SCOOTERS</a>
+                <a class="toogle" href="#">GALLERY</a>
+                <a class="toogle" href="#">CONTACT</a>
+                <a class="toogle" href="#">Login</a>
+                <a class="toogle" href="#">Sign Up</a>
         </div>
         <!-- toogle menu ends -->
 
         <!-- searchbar starts -->
-        <div class="search-container" id="mySearchbar">
+        <div class="search-container" id="mySearchbar" onscroll="searchbar">
             <input type="text" placeholder="Search.." class="searchterm" name="search">
               
               <button type="submit" class="searchbutton">
@@ -113,6 +119,7 @@
       <div class="featured-product-list">
         <div class="aexor-155">
           <img style="width: 100%;" src="../images/home/aexor 155.png" alt="Aexor 155"><span class="products-name">Aexor 155</span>
+          <div class="text">Click for details</div>
         </div>
 
         <div class="fz-x">
@@ -128,26 +135,57 @@
         </div>
       </div>
     </div>
+
+    <!-- Discription section starts -->
+    <div class="intro-container">
+      <div class="intro">
+        <h1 class="title">YAMAHA</h1>
+        <p style="font-size: 15px;">
+          Owning bikes in Nepal has become a must in Nepal. Hectic traffic jams, narrow streets and unreliable public transportation has made bike a basic need to everyone. Bikes are less expensive than car, easy to park and can be used to transport everything and everyone. These are the reasons that make bikes in Nepal a necessity.
+          <br><br>
+          <span class="after-1000px" id="myContent">
+          Bikes mean basically motorcycles and scooters. In Nepal, Yamaha bikes are considered as one         of the most trusted ones. In fact Yamaha bikes are most technologically advanced and are         loaded with the features that make riding a pleasure.
+          <br><br>
+          MAW Enterprises started its operation with Yamaha since 1975 importing motorcycles in Nepal.         At that time, we introduced Rajdoot and Escorts bikes which are now Yamaha. Since then we         have been offering dozens of model to Nepalese customers. We have nation-wide network of         over 100 dealers. Presently, our product portfolio includes, sports models such as R15V4         (155cc), R15V3 (155cc), Neo-Retro Model FZ-X (149cc), Blue-Core Technology enabled models         such as FZS-FI V3 BS6 X-connect (149)cc, FZ-S FI (Fuel-Injected, 149 cc), FZ FI         (Fuel-Injected, 149 cc), SZ-RR version 2.0 (149 cc), Saluto (125 cc), Fuel efficient with         High Performance Scooter RayZR 125 FI (125cc), Fascino (125 cc & 113 cc), Ray Z (113 cc),         Ray ZR (113 cc). And these are well celebrated bikes in Nepal.
+          <br><br>
+          Yamaha’s motorcycles and scooters are fitted with patented ‘BLUE CORE’ engines. R15, the one         which introduced racing culture in Nepal has its design and engine adopted from the racing         beast R1. It is tremendously popular among youngsters with racing instinct. FZ, R15 in bike         and RayZR 125 FI, Fascino 125 FI in scooter are equipped with Fuel Injection (FI) technology         that not only enhances the performance of motorcycle but also lessens the fuel consumption         and thus increasing the mileage.
+          <br><br>
+          Corporate office of Yamaha Division is located in Tripureshwor, Kathmandu. Nepal’s first         YAMAHA Bike Station (YBS) is located at Tripureshwor, Kathmandu. YBS has a showroom, service         workshop, and a spares i.e. 3S outlet all under the same roof and is the largest center of         bikes in Nepal.
+          <br><br>
+          We have over 100 dealers all over nations with facility of sale, service and spare parts.
+          Besides, we have more than one hundred Authorized Service Points (ASPs) in different place         of the country, so that customer can reach their nearest service center. We organize free         service camp every month in different place of the country as well.
+          </span>
+      </p>
+  
+      <div class="read-more" onclick="readmoreButton()" id="btn">
+        <button type="button">Read More</button>
+      </div>
+    </div>
+
+    <div class="intro-side-image">
+      <img style="width: 100%;" src="../images/home/fi.jpg" alt="">
+    </div>
+
+    </div>
 </body>
 <script>
-    window.onscroll = myFunction;
-  
+   
+  //  js for sticky nav bar starts
+  window.onscroll = function() {myFunction()};
   var header = document.getElementById("myHeader");
   var sticky = header.offsetTop;
-  var hold = header.offsetTop;
-  var search = document.getElementById("mySearchbar");
   
   function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
-      search.classList.add("hold")
     } else {
       header.classList.remove("sticky");
-      search.classList.remove("hold")
     }
   }
+  // js ends for sticky nava bar
 
-    function toggleMenulists() {
+  // js for responsive menu bar starts
+    function openNav() {
       var menuItem = document.getElementById("toogle-menu-lists");
       if (menuItem.style.display === "none") {
           menuItem.style.display = "block";
@@ -155,5 +193,29 @@
         menuItem.style.display = "none";
       }
     }
+    // js ends for responsive nvabar
+
+    // js starts for sticky search bar
+    // function searchbar() {
+    //   var searchBar = document.getElementById("mySearchbar")
+    //   if (window.pageYOffset > 150) {
+    //     searchBar.classList.add("hold");
+    //   }
+    //   else {
+    //     searchBar.classList.remove("hold");
+    //   }
+    // }
+
+    // read more button js starts
+    function readmoreButton() {
+      var readmoreContent = document.getElementById("myContent");
+      if (readmoreContent.style.display === "none") {
+        readmoreContent.style.display = "block";
+      }
+      else {
+        readmoreContent.style.display = "none";
+      }
+    }
+    // read more button js ends here
 </script>
 </html>
