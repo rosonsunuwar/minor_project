@@ -86,7 +86,7 @@
         <!-- toogle menu ends -->
 
         <!-- searchbar starts -->
-        <div class="search-container" id="mySearchbar" onscroll="searchbar">
+        <div class="search-container" id="mySearchbar" onscroll="searchbar()">
             <input type="text" placeholder="Search.." class="searchterm" name="search">
               
               <button type="submit" class="searchbutton">
@@ -166,7 +166,56 @@
       <img style="width: 100%;" src="../images/home/fi.jpg" alt="">
     </div>
 
+    <div class="racing">
+      <img style="width: 100%;" src="../images/home/racing.png" alt="">
     </div>
+    </div>
+    <!-- discription sections ends -->
+
+    <!-- * FOOTER SECTIONS STARTS -->
+    <div class="footer">
+      <h1>CONTACT US</h1>
+      <h4>M.A.W Enterprises Pvt. Ltd.</h4>
+      <h4>Teku, Kathmandu</h4>
+      <h4 class="contact">Yamaha Showroom: <a href="">01-5368252</a></h4>
+      <h4 class="contact">Yamaha Spare Parts: <a href="">01-5315594</a></h4>
+      <h4 class="contact">Corporate Building: <a href="">01-5358359</a></h4>
+      <div class="social">
+          <p>
+              <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=info@yamaha.com.np">
+                  Email: info@yamaha.com.np
+              </a>
+          </p>
+          <ul class="icons">
+              <li class="facebook">
+                  <a href="https://www.facebook.com/YamahaNepal/" target="_blank">
+                      <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+              </li>
+              <li class="instagram">
+                  <a href="https://www.instagram.com/yamaha_nepal/" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+              </li>
+              <li class="youtube">
+                  <a href="https://www.youtube.com/c/YamahaNepal" target="_blank">
+                      <i class="fa-brands fa-youtube"></i>
+                  </a>
+              </li>
+              <li class="twitter">
+                  <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FYamaha_Nepal" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                  </a>
+              </li>
+          </ul>
+          <div class="copy">
+              <p>© Copyright Yamaha All Rights Reserved. Crafted by
+                  <span><a href="">WE</a></span>
+              </p>
+          </div>
+      </div>
+  </div>
+  <!-- * FOOTER SECTIONS ENDS -->
 </body>
 <script>
    
@@ -198,7 +247,7 @@
     // js starts for sticky search bar
     // function searchbar() {
     //   var searchBar = document.getElementById("mySearchbar")
-    //   if (window.pageYOffset > 150) {
+    //   if (window.pageYOffset > hold) {
     //     searchBar.classList.add("hold");
     //   }
     //   else {
