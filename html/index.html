@@ -7,70 +7,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaha</title>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../javascript/script.js">
+    <script src="https://kit.fontawesome.com/cf6daf62a4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- header section starts -->
     <div class="header">
-        <div class="logo">
-            <div class="image"><img src="../images/home/logo.png" alt="Yamaha"></div>
-        </div>
+           <img src="../images/home/wallpaper.jpg" style="position: relative; width: 100%;">
 
-        <!-- navigation bar -->
-        <nav class="navbar">
-            <a class="active" href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="#moterbike">MOTORBIKES</a>
-            <a href="#scooter">SCOOTER</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
+           
+        <div class="navbar" id="myHeader">
+            <!-- yamaha logo -->
+            <div class="logo"><img src="../images/home/logo.png" alt=""></div>
+            
+            <!-- navbar section starts -->
+               <div class="nav_lists">
+                  <a class="nav" href="#">HOME</a>
+                  <a class="nav" href="#">ABOUT</a>
 
-        <!-- login or sign up section -->
-        <span class="login_section">
-            <ul>
-                <a href="#login" class="login">Login</a>
-                <a href="#sign_up" class="sign_up">Sign Up</a>
-            </ul>
-        </span>
+                  <!-- drppdown lists of bike -->
+                  <div class="dropdown">
+                    <a class="nav" href="#">BIKES</a>
+                    <div class="dropdown-content">
+                      <a href="#">R15M</a>
+                      <a href="#">R15V3</a>
+                      <a href="#">R15V4</a>
+                      <a href="#">MT15</a>
+                      <a href="#">MTO9</a>
+                      <a href="#">FZSV2</a>
+                      <a href="#">FZSV3</a>
+                    </div>
+                  </div>
+                  
+                  <!-- dropdown lists of scooter -->
+                  <div class="dropdown">
+                    <a class="nav" href="#">SCOOTERS</a>
+                    <div class="dropdown-content">
+                      <a href="#">AROX 155</a>
+                      <a href="#">RAY Z 113</a>
+                      <a href="#">FASCINO</a>
+                      <a href="#">RAY ZR 125 FI SERIES</a>
+                    </div>
+                  </div>
+                  
+                  <a class="nav" href="#">GALLERY</a>
+                  <a class="nav" href="#">CONTACTS</a>
+                </div>
+           <!-- navbar section ends -->
 
+           <!-- login section starts -->
+           <div class="login">
+              <div>
+                  <a class="nav" href="#">Login</a>
+                  <a class="nav" href="#">Sign Up</a>
+              </div>
+           </div>
+           <!-- login section ends -->
 
-        <!-- dropdown -->
-        <div class="dropdown">
-            <!-- using checkbox -->
-            <label for="menu" class="menu_icon">&#9776;</label>
-            <input type="checkbox" onclick="myFunction()" id="menu" class="checkbox">
-        </div>
-    </div>
-    <div class="menu_list"></div>
-    <div id="myDropdown" class="dropdown_content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#moterbike">Moterbikes</a>
-        <a href="#scooter">Scooter</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-
-
-    <div class="intro">
-        <h1>
-            Search it <br>
-            and <span style="color: orangered;">book</span> enjoyable.
-        </h1>
-        <p>
-            Find, explore and book in an awesome <br>place find, explore
-            and transfer in an awesome and great place.
-        </p>
-    </div>
-
-    <div class="container">
-        <div class="pictures">
-            <div class="r1"><img src="../images/home/r1.png" alt="R1">
+            <!-- menu bar -->
+              <div class="menubar" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+              </div>
             </div>
-            <div class="cross"><img src="../images/home/cross.png" alt="cross">
-            </div>
+            <!-- menubar ends -->
+
+             <!-- toogle menubar starts -->
+             <div class="toogle-menu" id="toogle-menu-lists">
+                <a class="toogle" href="#">HOME</a>
+                <a class="toogle" href="#">ABOUT</a>
+                <a class="toogle" href="#">BIKES</a>
+                <a class="toogle" href="#">SCOOTERS</a>
+                <a class="toogle" href="#">GALLERY</a>
+                <a class="toogle" href="#">CONTACT</a>
+                <a class="toogle" href="#">Login</a>
+                <a class="toogle" href="#">Sign Up</a>
         </div>
+        <!-- toogle menu ends -->
+
+        <!-- searchbar starts -->
+        <div class="search-container" id="mySearchbar" onscroll="searchbar()">
+            <input type="text" placeholder="Search.." class="searchterm" name="search">
+              
+              <button type="submit" class="searchbutton">
+                <i class="fa fa-search"></i>
+              </button>
+          </div>
+          <!-- searchbar ends -->
     </div>
+    <!-- header section ends -->
+
+    <!-- products icons linkd -->
+    <div class="linked-icons">
+      <div class="bikes-linked-icon">
+        <img style="width: 100%;" src="../images/home/r15.png" alt="bikes-icon">
+      </div>
+
+      <div class="scooters-linked-icon">
+        <img style="width: 100%;" src="../images/home/Fascino.png" alt="">
+      </div>
+
+      <div class="gallery-linked-icon">
+        <img style="width: 100%;" src="../images/home/gallery.png" alt="gallery">
+      </div>
+    </div>
+
+    <!-- featured products section starts -->
+    <div class="featured-section">
+      <h1 class="featured-section-tittle">FEATURED PRODUCTS</h1>
+
+      <div class="featured-product-list">
+        <div class="aexor-155">
+          <img style="width: 100%;" src="../images/home/aexor 155.png" alt="Aexor 155"><span class="products-name">Aexor 155</span>
+        </div>
+
+        <div class="fz-x">
+          <img style="width: 100%;" src="../images/home/fz-x.png" alt="fz-x">
+          <span class="products-name">FZ-X</span>
+        </div>
+
+        <div class="fzv3">
+          <img style="width: 100%;" src="../images/home/fzv3.png" alt="fzv3"><span class="products-name">FZ V3</span>
+        </div>
+
+        <div class="r15m">
+          <img style="width: 100%;" src="../images/home/r15m.png" alt="r15m"><span class="products-name">R15 V4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discription section starts -->
+    <div class="intro-container">
+      <div class="intro">
+        <h1 class="title">YAMAHA</h1>
+        <p style="font-size: 15px;">
+          Owning bikes in Nepal has become a must in Nepal. Hectic traffic jams, narrow streets and unreliable public transportation has made bike a basic need to everyone. Bikes are less expensive than car, easy to park and can be used to transport everything and everyone. These are the reasons that make bikes in Nepal a necessity.
+          <br><br>
+          <span class="after-1000px" id="myContent">
+          Bikes mean basically motorcycles and scooters. In Nepal, Yamaha bikes are considered as one         of the most trusted ones. In fact Yamaha bikes are most technologically advanced and are         loaded with the features that make riding a pleasure.
+          <br><br>
+          MAW Enterprises started its operation with Yamaha since 1975 importing motorcycles in Nepal.         At that time, we introduced Rajdoot and Escorts bikes which are now Yamaha. Since then we         have been offering dozens of model to Nepalese customers. We have nation-wide network of         over 100 dealers. Presently, our product portfolio includes, sports models such as R15V4         (155cc), R15V3 (155cc), Neo-Retro Model FZ-X (149cc), Blue-Core Technology enabled models         such as FZS-FI V3 BS6 X-connect (149)cc, FZ-S FI (Fuel-Injected, 149 cc), FZ FI         (Fuel-Injected, 149 cc), SZ-RR version 2.0 (149 cc), Saluto (125 cc), Fuel efficient with         High Performance Scooter RayZR 125 FI (125cc), Fascino (125 cc & 113 cc), Ray Z (113 cc),         Ray ZR (113 cc). And these are well celebrated bikes in Nepal.
+          <br><br>
+          Yamaha’s motorcycles and scooters are fitted with patented ‘BLUE CORE’ engines. R15, the one         which introduced racing culture in Nepal has its design and engine adopted from the racing         beast R1. It is tremendously popular among youngsters with racing instinct. FZ, R15 in bike         and RayZR 125 FI, Fascino 125 FI in scooter are equipped with Fuel Injection (FI) technology         that not only enhances the performance of motorcycle but also lessens the fuel consumption         and thus increasing the mileage.
+          <br><br>
+          Corporate office of Yamaha Division is located in Tripureshwor, Kathmandu. Nepal’s first         YAMAHA Bike Station (YBS) is located at Tripureshwor, Kathmandu. YBS has a showroom, service         workshop, and a spares i.e. 3S outlet all under the same roof and is the largest center of         bikes in Nepal.
+          <br><br>
+          We have over 100 dealers all over nations with facility of sale, service and spare parts.
+          Besides, we have more than one hundred Authorized Service Points (ASPs) in different place         of the country, so that customer can reach their nearest service center. We organize free         service camp every month in different place of the country as well.
+          </span>
+      </p>
+  
+      <div class="read-more" onclick="readmoreButton()" id="btn">
+        <button type="button">Read More</button>
+      </div>
+    </div>
+
+    <div class="intro-side-image">
+      <img style="width: 100%;" src="../images/home/fi.jpg" alt="">
+    </div>
+
+    <div class="racing">
+      <img style="width: 100%;" src="../images/home/racing.png" alt="">
+    </div>
+    </div>
+    <!-- discription sections ends -->
+
+    <!-- * FOOTER SECTIONS STARTS -->
+    <div class="footer">
+      <h1>CONTACT US</h1>
+      <h4>M.A.W Enterprises Pvt. Ltd.</h4>
+      <h4>Teku, Kathmandu</h4>
+      <h4 class="contact">Yamaha Showroom: <a href="">01-5368252</a></h4>
+      <h4 class="contact">Yamaha Spare Parts: <a href="">01-5315594</a></h4>
+      <h4 class="contact">Corporate Building: <a href="">01-5358359</a></h4>
+      <div class="social">
+          <p>
+              <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=info@yamaha.com.np">
+                  Email: info@yamaha.com.np
+              </a>
+          </p>
+          <ul class="icons">
+              <li class="facebook">
+                  <a href="https://www.facebook.com/YamahaNepal/" target="_blank">
+                      <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+              </li>
+              <li class="instagram">
+                  <a href="https://www.instagram.com/yamaha_nepal/" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+              </li>
+              <li class="youtube">
+                  <a href="https://www.youtube.com/c/YamahaNepal" target="_blank">
+                      <i class="fa-brands fa-youtube"></i>
+                  </a>
+              </li>
+              <li class="twitter">
+                  <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FYamaha_Nepal" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                  </a>
+              </li>
+          </ul>
+          <div class="copy">
+              <p>© Copyright Yamaha All Rights Reserved. Crafted by
+                  <span><a href="">WE</a></span>
+              </p>
+          </div>
+      </div>
+  </div>
+  <!-- * FOOTER SECTIONS ENDS -->
 </body>
-<link rel="stylesheet" href="../javascript/script.js">
+<script>
+   
+  //  js for sticky nav bar starts
+  window.onscroll = function() {myFunction()};
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  // js ends for sticky nava bar
+
+  // js for responsive menu bar starts
+    function openNav() {
+      var menuItem = document.getElementById("toogle-menu-lists");
+      if (menuItem.style.display === "none") {
+          menuItem.style.display = "block";
+      } else {
+        menuItem.style.display = "none";
+      }
+    }
+    // js ends for responsive nvabar
+
+    // js starts for sticky search bar
+    // function searchbar() {
+    //   var searchBar = document.getElementById("mySearchbar")
+    //   if (window.pageYOffset > hold) {
+    //     searchBar.classList.add("hold");
+    //   }
+    //   else {
+    //     searchBar.classList.remove("hold");
+    //   }
+    // }
+
+    // read more button js starts
+    function readmoreButton() {
+      var readmoreContent = document.getElementById("myContent");
+      if (readmoreContent.style.display === "none") {
+        readmoreContent.style.display = "block";
+      }
+      else {
+        readmoreContent.style.display = "none";
+      }
+    }
+    // read more button js ends here
+</script>
 </html>
