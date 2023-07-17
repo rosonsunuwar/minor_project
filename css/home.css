@@ -11,6 +11,7 @@
     width: 100%;
 }
 
+/* nav bar css starts */
 .navbar{
     width: 100%;
     position: absolute;
@@ -100,6 +101,7 @@ a{
     opacity: 1;
     height: auto;
 }
+/* navbar css ends */
 
 .search-container{
   position: absolute;
