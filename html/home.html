@@ -40,6 +40,7 @@
                     </div>
                   </div>
                   
+
                   <!-- dropdown lists of scooter -->
                   <div class="dropdown">
                     <a class="nav" href="scooter.html">SCOOTERS</a>
@@ -56,6 +57,8 @@
                 </div>
            <!-- navbar section ends -->
 
+
+
            <!-- search term starts here -->
            <div class="box">
                <div class="container-2">
@@ -67,6 +70,8 @@
            </div>
            <!-- search term ends here -->
 
+
+
            <!-- login section starts -->
            <div class="login">
               <div>
@@ -76,28 +81,29 @@
            </div>
            <!-- login section ends -->
 
-            <!-- menu bar -->
+
+
+            <!-- toogle menu bar -->
               <div class="menubar" onclick="openNav()">
                 <i class="fa fa-bars"></i>
+                <div class="toogle-menu" id="toogle-menu-lists">
+                  <div class="closebar" onclick="closeNav()"><i class="fa fa-times"></i></div>
+                  <a class="toogle" href="#">HOME</a>
+                  <a class="toogle" href="#">ABOUT</a>
+                  <a class="toogle" href="#">BIKES</a>
+                  <a class="toogle" href="#">SCOOTERS</a>
+                  <a class="toogle" href="#">GALLERY</a>
+                  <a class="toogle" href="#">CONTACT</a>
+                  <a class="toogle" href="#">Login</a>
+                  <a class="toogle" href="#">Sign Up</a>
+               </div>
               </div>
             </div>
-            <!-- menubar ends -->
-
-             <!-- toogle menubar starts -->
-             <div class="toogle-menu" id="toogle-menu-lists">
-                <a class="toogle" href="#">HOME</a>
-                <a class="toogle" href="#">ABOUT</a>
-                <a class="toogle" href="#">BIKES</a>
-                <a class="toogle" href="#">SCOOTERS</a>
-                <a class="toogle" href="#">GALLERY</a>
-                <a class="toogle" href="#">CONTACT</a>
-                <a class="toogle" href="#">Login</a>
-                <a class="toogle" href="#">Sign Up</a>
-        </div>
-        <!-- toogle menu ends -->
-        
+            <!-- toogle menubar ends -->
     </div>
     <!-- header section ends -->
+
+
 
     <!-- products icons linkd -->
     <div class="linked-icons">
@@ -113,6 +119,9 @@
         <img style="width: 100%;" src="../images/home/gallery.png" alt="gallery">
       </div>
     </div>
+    <!-- linked icons section ends -->
+
+
 
     <!-- featured products section starts -->
     <div class="featured-section">
@@ -137,6 +146,8 @@
         </div>
       </div>
     </div>
+   <!-- featured product section ends here -->
+
 
     <!-- Discription section starts -->
     <div class="intro-container">
@@ -173,6 +184,8 @@
     </div>
     </div>
     <!-- discription sections ends -->
+
+
 
     <!-- * FOOTER SECTIONS STARTS -->
     <div class="footer">
@@ -245,17 +258,6 @@
       }
     }
     // js ends for responsive nvabar
-
-    // js starts for sticky search bar
-    // function searchbar() {
-    //   var searchBar = document.getElementById("mySearchbar")
-    //   if (window.pageYOffset > hold) {
-    //     searchBar.classList.add("hold");
-    //   }
-    //   else {
-    //     searchBar.classList.remove("hold");
-    //   }
-    // }
 
     // read more button js starts
     function readmoreButton() {
