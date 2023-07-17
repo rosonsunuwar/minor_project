@@ -1,78 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About section</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Yamaha</title>
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../javascript/script.js">
+    <script src="https://kit.fontawesome.com/cf6daf62a4.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class="navbar" id="myHeader">
-        <!-- yamaha logo -->
-        <div class="logo"><img src="../images/home/logo.png" alt=""></div>
-        
-        <!-- navbar section starts -->
-           <div class="nav_lists">
-              <a class="nav" href="#">HOME</a>
-              <a class="nav" href="#">ABOUT</a>
-      
-              <!-- drppdown lists of bike -->
-              <div class="dropdown">
-                <a class="nav" href="#">BIKES</a>
-                <div class="dropdown-content">
-                  <a href="#">R15M</a>
-                  <a href="#">R15V3</a>
-                  <a href="#">R15V4</a>
-                  <a href="#">MT15</a>
-                  <a href="#">MTO9</a>
-                  <a href="#">FZSV2</a>
-                  <a href="#">FZSV3</a>
+    <!-- header section starts -->
+    <div class="header">
+           <img src="../images/home/fz-x.jpg" style="position: relative; width: 100%;">
+
+           
+        <div class="navbar" id="myHeader">
+            <!-- yamaha logo -->
+            <div class="logo"><img src="../images/home/logo.png" alt=""></div>
+            
+            <!-- navbar section starts -->
+               <div class="nav_lists">
+                  <a class="nav" href="#">HOME</a>
+                  <a class="nav" href="#">ABOUT</a>
+
+                  <!-- drppdown lists of bike -->
+                  <div class="dropdown">
+                    <a class="nav" href="#">BIKES</a>
+                    <div class="dropdown-content">
+                      <a href="#">R15M</a>
+                      <a href="#">R15V3</a>
+                      <a href="#">R15V4</a>
+                      <a href="#">MT15</a>
+                      <a href="#">MTO9</a>
+                      <a href="#">FZSV2</a>
+                      <a href="#">FZSV3</a>
+                    </div>
+                  </div>
+                  
+                  <!-- dropdown lists of scooter -->
+                  <div class="dropdown">
+                    <a class="nav" href="#">SCOOTERS</a>
+                    <div class="dropdown-content">
+                      <a href="#">AROX 155</a>
+                      <a href="#">RAY Z 113</a>
+                      <a href="#">FASCINO</a>
+                      <a href="#">RAY ZR 125 FI SERIES</a>
+                    </div>
+                  </div>
+                  
+                  <a class="nav" href="#">GALLERY</a>
+                  <a class="nav" href="#">CONTACTS</a>
                 </div>
+           <!-- navbar section ends -->
+
+           <!-- login section starts -->
+           <div class="login">
+              <div>
+                  <a class="nav" href="#">Login</a>
+                  <a class="nav" href="#">Sign Up</a>
               </div>
-              
-              <!-- dropdown lists of scooter -->
-              <div class="dropdown">
-                <a class="nav" href="#">SCOOTERS</a>
-                <div class="dropdown-content">
-                  <a href="#">AROX 155</a>
-                  <a href="#">RAY Z 113</a>
-                  <a href="#">FASCINO</a>
-                  <a href="#">RAY ZR 125 FI SERIES</a>
-                </div>
+           </div>
+           <!-- login section ends -->
+
+            <!-- menu bar -->
+              <div class="menubar" onclick="openNav()">
+                <i class="fa fa-bars"></i>
               </div>
-              
-              <a class="nav" href="#">GALLERY</a>
-              <a class="nav" href="#">CONTACTS</a>
             </div>
-       <!-- navbar section ends -->
-      
-       <!-- login section starts -->
-       <div class="login">
-          <div>
-              <a class="nav" href="#">Login</a>
-              <a class="nav" href="#">Sign Up</a>
-          </div>
-       </div>
-       <!-- login section ends -->
-      
-        <!-- menu bar -->
-          <div class="menubar" onclick="openNav()">
-            <i class="fa fa-bars"></i>
-          </div>
+            <!-- menubar ends -->
+
+             <!-- toogle menubar starts -->
+             <div class="toogle-menu" id="toogle-menu-lists">
+                <a class="toogle" href="#">HOME</a>
+                <a class="toogle" href="#">ABOUT</a>
+                <a class="toogle" href="#">BIKES</a>
+                <a class="toogle" href="#">SCOOTERS</a>
+                <a class="toogle" href="#">GALLERY</a>
+                <a class="toogle" href="#">CONTACT</a>
+                <a class="toogle" href="#">Login</a>
+                <a class="toogle" href="#">Sign Up</a>
         </div>
-        <!-- menubar ends -->
-      
-         <!-- toogle menubar starts -->
-         <div class="toogle-menu" id="toogle-menu-lists">
-            <a class="toogle" href="#">HOME</a>
-            <a class="toogle" href="#">ABOUT</a>
-            <a class="toogle" href="#">BIKES</a>
-            <a class="toogle" href="#">SCOOTERS</a>
-            <a class="toogle" href="#">GALLERY</a>
-            <a class="toogle" href="#">CONTACT</a>
-            <a class="toogle" href="#">Login</a>
-            <a class="toogle" href="#">Sign Up</a>
-      </div>
-      <!-- toogle menu ends -->
-</body>
+        <!-- toogle menu ends -->
+        
+        <!-- js section starts here -->
+        <script>
+   
+          //  js for sticky nav bar starts
+          window.onscroll = function() {myFunction()};
+          var header = document.getElementById("myHeader");
+          var sticky = header.offsetTop;
+          
+          function myFunction() {
+            if (window.pageYOffset > sticky) {
+              header.classList.add("sticky");
+            } else {
+              header.classList.remove("sticky");
+            }
+          }
+          // js ends for sticky nava bar
+        
+          // js for responsive menu bar starts
+            function openNav() {
+              var menuItem = document.getElementById("toogle-menu-lists");
+              if (menuItem.style.display === "none") {
+                  menuItem.style.display = "block";
+              } else {
+                menuItem.style.display = "none";
+              }
+            }
+            // js ends for responsive nvabar
+        </script>
+        </body>
 </html>

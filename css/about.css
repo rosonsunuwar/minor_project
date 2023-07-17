@@ -1,3 +1,19 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: black;
+}
+
+.header{
+  position: relative;
+  width: 100%;
+}
+
 /* nav bar css starts */
 .navbar{
   width: 100%;
@@ -88,9 +104,36 @@ a{
   opacity: 1;
   height: auto;
 }
-/* navbar css ends */
+/* nav bar ends here */
 
-/* responsive section for nav bar starts */
+/* toogle menu */
+.toogle-menu{
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  height: fit-content;
+  padding: 10px;
+  background-color: black;
+}
+
+.toogle{
+  display: block;
+  color: white;
+  padding: 10px 0px;
+}
+
+.toogle:hover{
+  color: blue;
+}
+/* toogle menu ends */
+
+/* responsive section */
+
+.menubar{
+  display: none;
+}
 @media screen and (max-width: 1000px) {
   .nav_lists{
       display: none;
@@ -102,6 +145,7 @@ a{
 
   .menubar{
       display: block;
+      cursor: pointer;
+      font-size: 30px;
       }
   }
-  /* responsive section for nav bar ends */
