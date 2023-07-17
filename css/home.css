@@ -21,7 +21,8 @@
     align-items: center;
     top: 5%;
     z-index: 5;
-    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .content {
@@ -44,14 +45,14 @@
     padding: 8px 10px;
     border: none;
     border-radius: 15px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     /* background-color: rgba(255, 255, 255, 0.1); */
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .login{
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    /* background-color: rgba(0, 0, 0, 0.5); */
     border: none;
     border-radius: 15px;
     padding: 8px 10px;
@@ -101,50 +102,68 @@ a{
     opacity: 1;
     height: auto;
 }
+
+/* search section starts*/
+.box{
+    height: 50px;
+  }
+  
+  .container-2{
+    vertical-align: middle;
+    white-space:nowrap;
+    position:relative;
+  }
+
+  .container-2 input#search{
+    width: 50px;
+    height: 50px;
+    border:none;
+    font-size: 12pt;
+    float: left;
+    padding-left: 45px;
+    border-radius: 15px;
+    color: #fff;
+    background: transparent;
+    transition: width .55s ease;
+  }
+  
+  .container-2 input#search::-webkit-input-placeholder {
+     color: #fff;
+  }
+   
+  .container-2 input#search:-moz-placeholder { /* Firefox 18- */
+     color: #65737e;  
+  }
+   
+  .container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
+     color: #65737e;  
+  }
+   
+  .container-2 input#search:-ms-input-placeholder {  
+     color: #65737e;  
+  }
+  
+  .container-2 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    color: #fff;
+  }
+  
+  .container-2 input#search:focus, .container-2 input#search:active{
+    outline:none;
+    width: 300px;
+  }
+  
+  .container-2:hover input#search{
+    width: 300px;
+  }
+  
+  /* search section ends */
 /* navbar css ends */
 
-.search-container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  width: 50%;
-  padding: 0px;
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  justify-content: center;
-}
 
-.hold{
-    position: fixed;
-    top: 25px;
-    width: 50%;
-}
-
-.searchterm{
-    padding: 15px;
-    font-size: 20px;
-    width: 100%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 7vh;
-}
-
-.searchbutton{
-    width: 50px;
-    border: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    font-size: 25px;
-}
-
-.searchbutton:hover{
-    transform: scale(1.1);
-}
 
 .menubar{
     color: blue;
