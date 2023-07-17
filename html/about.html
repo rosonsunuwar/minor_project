@@ -25,43 +25,73 @@
 </head>
 
 <body>
-    <!-- * NAVBAR STARTS  -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-        <a class="navbar-brand" href="#">
-            <img src="../images/home/logo.png" alt="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../html/index.html">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="../html/about.html">ABOUT US</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/">BIKES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/">SCOOTER</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/gallery.html">GALLERY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/">CONTACT</a>
-                </li>
-            </ul>
+    <div class="navbar" id="myHeader">
+        <!-- yamaha logo -->
+        <div class="logo"><img src="../images/home/logo.png" alt=""></div>
+        
+        <!-- navbar section starts -->
+           <div class="nav_lists">
+              <a class="nav" href="#">HOME</a>
+              <a class="nav" href="#">ABOUT</a>
+      
+              <!-- drppdown lists of bike -->
+              <div class="dropdown">
+                <a class="nav" href="#">BIKES</a>
+                <div class="dropdown-content">
+                  <a href="#">R15M</a>
+                  <a href="#">R15V3</a>
+                  <a href="#">R15V4</a>
+                  <a href="#">MT15</a>
+                  <a href="#">MTO9</a>
+                  <a href="#">FZSV2</a>
+                  <a href="#">FZSV3</a>
+                </div>
+              </div>
+              
+              <!-- dropdown lists of scooter -->
+              <div class="dropdown">
+                <a class="nav" href="#">SCOOTERS</a>
+                <div class="dropdown-content">
+                  <a href="#">AROX 155</a>
+                  <a href="#">RAY Z 113</a>
+                  <a href="#">FASCINO</a>
+                  <a href="#">RAY ZR 125 FI SERIES</a>
+                </div>
+              </div>
+              
+              <a class="nav" href="#">GALLERY</a>
+              <a class="nav" href="#">CONTACTS</a>
+            </div>
+       <!-- navbar section ends -->
+      
+       <!-- login section starts -->
+       <div class="login">
+          <div>
+              <a class="nav" href="#">Login</a>
+              <a class="nav" href="#">Sign Up</a>
+          </div>
+       </div>
+       <!-- login section ends -->
+      
+        <!-- menu bar -->
+          <div class="menubar" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
-        <div class="nav-wrap">
-            <img class="d-none d-lg-block d-xl-block" src="../images/about//yamaha.png" alt="slogan">
-        </div>
-    </nav>
-    <!-- * NAVBAR ENDS  -->
+        <!-- menubar ends -->
+      
+         <!-- toogle menubar starts -->
+         <div class="toogle-menu" id="toogle-menu-lists">
+            <a class="toogle" href="#">HOME</a>
+            <a class="toogle" href="#">ABOUT</a>
+            <a class="toogle" href="#">BIKES</a>
+            <a class="toogle" href="#">SCOOTERS</a>
+            <a class="toogle" href="#">GALLERY</a>
+            <a class="toogle" href="#">CONTACT</a>
+            <a class="toogle" href="#">Login</a>
+            <a class="toogle" href="#">Sign Up</a>
+      </div>
+      <!-- toogle menu ends -->
 
 
     <div class="container">
@@ -240,5 +270,36 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+
+    <!-- java script starts from here -->
+<script>
+   
+    //  js for sticky nav bar starts
+    window.onscroll = function() {myFunction()};
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    // js ends for sticky nava bar
+  
+    // js for responsive menu bar starts
+      function openNav() {
+        var menuItem = document.getElementById("toogle-menu-lists");
+        if (menuItem.style.display === "none") {
+            menuItem.style.display = "block";
+        } else {
+          menuItem.style.display = "none";
+        }
+      }
+      // js for responsive menu bar ends
+  </script>
+  <!-- java scripts ends here -->
 
 </html>
