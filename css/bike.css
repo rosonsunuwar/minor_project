@@ -134,18 +134,3 @@
   .menubar{
     display: none;
   }
-  @media screen and (max-width: 1000px) {
-    .nav_lists{
-        display: none;
-    }
-  
-    .login{
-        display: none;
-    }
-  
-    .menubar{
-        display: block;
-        cursor: pointer;
-        font-size: 30px;
-        }
-    }
